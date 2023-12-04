@@ -8,22 +8,39 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles.css">
 	<title>Text Editor - [CT-2019-030]</title>
 </head>
 
 <body>
 
-    <!--  Remove this div once you are started -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Start Your Work Here!</h1>
-                <hr>
-            </div>
-        </div>
-    </div>
-    
-    
+ <!-- Toolbar -->
+<div class="toolbar">
+    <button onclick="bold('bold')"><img src="Resources/bold-xxl.png" alt="Bold"></button> <!-- Button for making text bold -->
+    <button onclick="underline('underline')"><img src="Resources/underline.png" alt="Underline"></button> <!-- Button for underlining text -->
+    <button onclick="italic('italic')"><img src="Resources/italic.png" alt="Italic"></button> <!-- Button for making text italic -->
+      <label for="colorPicker" class="color-picker-label">
+        <img src="Resources/color-picker-icon.png" alt="Color Picker">
+        <input type="color" id="colorPicker" onchange="colorchange('foreColor', this.value)">
+      </label> <!-- Color picker for changing text color -->
+     <button id="align-left" onclick="setTextAlignment('left')"><img src="Resources/align-left.png" alt="Left"></button> <!-- Button for aligning text to the left -->
+     <button id="align-center" onclick="setTextAlignment('center')"><img src="Resources/align-center.png" alt="Center"></button> <!-- Button for centering text -->
+     <button id="align-right" onclick="setTextAlignment('right')"><img src="Resources/align-right.png" alt="Right"></button> <!-- Button for aligning text to the right -->
+     <button id="align-justify" onclick="setTextAlignment('justify')"><img src="Resources/align-justify.png" alt="Justify"></button> <!-- Button for justifying text -->
+     <button onclick="execUndo()"><img src="Resources/undo.png" alt="Undo"></button> <!-- Button for undoing the last action -->
+     <button onclick="execRedo()"><img src="Resources/redo.png" alt="Redo"></button> <!-- Button for redoing the last undone action -->
+
+  
+</div>
+
+<!-- Contenteditable div for the text editor -->
+<div id="editor" contenteditable="true"></div>
+
+<!-- JavaScript File -->
+<script src="JavaScript.js"></script>
+
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
