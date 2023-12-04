@@ -1,6 +1,17 @@
 // CT-2019-030 - JavaScripts
 
 
+//Functions for Redo and Undo
+
+function execUndo() {
+    document.execCommand('undo', false, null);
+}
+
+function execRedo() {
+    document.execCommand('redo', false, null);
+}
+
+
 //Function For Text Alignment
 
 function setTextAlignment(align) {
@@ -32,5 +43,6 @@ function underline(command) {
 function bold(command) {
     document.execCommand(command, false, null);
 }
+
 
 
