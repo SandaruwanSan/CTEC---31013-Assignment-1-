@@ -13,15 +13,20 @@
 
 <body>
 
-    <!--  Remove this div once you are started -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Start Your Work Here!</h1>
-                <hr>
-            </div>
-        </div>
-    </div>
+      <!-- Toolbar -->
+<div class="toolbar">
+    <label for="colorPicker" class="color-picker-label">
+        <img src="Resources/color-picker-icon.png" alt="Color Picker">
+        <input type="color" id="colorPicker" onchange="colorchange('foreColor', this.value)">
+    </label> <!-- Color picker for changing text color -->
+   
+</div>
+
+<!-- Contenteditable div for the text editor -->
+<div id="editor" contenteditable="true"></div>
+
+<!-- JavaScript File -->
+<script src="JavaScript.js"></script>
     
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
