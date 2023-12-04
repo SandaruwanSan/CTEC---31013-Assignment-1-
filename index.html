@@ -13,19 +13,21 @@
 
 <body>
 
-
  <!-- Toolbar -->
 <div class="toolbar">
     <button onclick="underline('underline')"><img src="Resources/underline.png" alt="Underline"></button> <!-- Button for underlining text -->
     <button onclick="bold('bold')"><img src="Resources/bold-xxl.png" alt="Bold"></button> <!-- Button for making text bold -->
     <button onclick="italic('italic')"><img src="Resources/italic.png" alt="Italic"></button> <!-- Button for making text italic -->
-    <label for="colorPicker" class="color-picker-label">
+      <label for="colorPicker" class="color-picker-label">
         <img src="Resources/color-picker-icon.png" alt="Color Picker">
         <input type="color" id="colorPicker" onchange="colorchange('foreColor', this.value)">
-    </label> <!-- Color picker for changing text color -->
+      </label> <!-- Color picker for changing text color -->
+     <button id="align-left" onclick="setTextAlignment('left')"><img src="Resources/align-left.png" alt="Left"></button> <!-- Button for aligning text to the left -->
+     <button id="align-center" onclick="setTextAlignment('center')"><img src="Resources/align-center.png" alt="Center"></button> <!-- Button for centering text -->
+     <button id="align-right" onclick="setTextAlignment('right')"><img src="Resources/align-right.png" alt="Right"></button> <!-- Button for aligning text to the right -->
+     <button id="align-justify" onclick="setTextAlignment('justify')"><img src="Resources/align-justify.png" alt="Justify"></button> <!-- Button for justifying text -->
 
-
-   
+  
 </div>
 
 <!-- Contenteditable div for the text editor -->
@@ -33,6 +35,7 @@
 
 <!-- JavaScript File -->
 <script src="JavaScript.js"></script>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
