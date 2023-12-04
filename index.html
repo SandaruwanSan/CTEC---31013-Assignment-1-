@@ -13,12 +13,18 @@
 
 <body>
 
-      <!-- Toolbar -->
+
+ <!-- Toolbar -->
 <div class="toolbar">
+    <button onclick="underline('underline')"><img src="Resources/underline.png" alt="Underline"></button> <!-- Button for underlining text -->
+    <button onclick="bold('bold')"><img src="Resources/bold-xxl.png" alt="Bold"></button> <!-- Button for making text bold -->
+    <button onclick="italic('italic')"><img src="Resources/italic.png" alt="Italic"></button> <!-- Button for making text italic -->
     <label for="colorPicker" class="color-picker-label">
         <img src="Resources/color-picker-icon.png" alt="Color Picker">
         <input type="color" id="colorPicker" onchange="colorchange('foreColor', this.value)">
     </label> <!-- Color picker for changing text color -->
+
+
    
 </div>
 
@@ -27,8 +33,7 @@
 
 <!-- JavaScript File -->
 <script src="JavaScript.js"></script>
-    
-    
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
