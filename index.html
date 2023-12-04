@@ -13,15 +13,18 @@
 
 <body>
 
-    <!--  Remove this div once you are started -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Start Your Work Here!</h1>
-                <hr>
-            </div>
-        </div>
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button onclick="execUndo()"><img src="Resources/undo.png" alt="Undo"></button> <!-- Button for undoing the last action -->
+        <button onclick="execRedo()"><img src="Resources/redo.png" alt="Redo"></button> <!-- Button for redoing the last undone action -->
+       
     </div>
+    
+    <!-- Contenteditable div for the text editor -->
+    <div id="editor" contenteditable="true"></div>
+    
+    <!-- JavaScript File -->
+    <script src="JavaScript.js"></script>
     
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
