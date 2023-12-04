@@ -13,15 +13,20 @@
 
 <body>
 
-    <!--  Remove this div once you are started -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Start Your Work Here!</h1>
-                <hr>
-            </div>
-        </div>
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button id="align-left" onclick="setTextAlignment('left')"><img src="Resources/align-left.png" alt="Left"></button> <!-- Button for aligning text to the left -->
+        <button id="align-center" onclick="setTextAlignment('center')"><img src="Resources/align-center.png" alt="Center"></button> <!-- Button for centering text -->
+        <button id="align-right" onclick="setTextAlignment('right')"><img src="Resources/align-right.png" alt="Right"></button> <!-- Button for aligning text to the right -->
+        <button id="align-justify" onclick="setTextAlignment('justify')"><img src="Resources/align-justify.png" alt="Justify"></button> <!-- Button for justifying text -->
+       
     </div>
+    
+    <!-- Contenteditable div for the text editor -->
+    <div id="editor" contenteditable="true"></div>
+    
+    <!-- JavaScript File -->
+    <script src="JavaScript.js"></script>
     
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
